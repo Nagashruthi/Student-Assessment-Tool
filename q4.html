@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>
+Audio & Video SCO
+</title>
+<style type="text/css">
+#q{
+	margin:auto;
+	margin-top: 200px;
+	border-style: solid;
+	border-width: 2px;
+	width: 1000px;
+}
+#q4name{
+	margin-left: 50px;
+}
+#q4ex
+{
+	margin-left: 20px;
+}
+#vd{
+	margin-left: 500px;
+	margin-top: 10px;
+}
+h3
+{
+	background-color: gray;
+	text-align: center;
+	margin-left: 0px;
+}
+
+</style>
+<script type="text/javascript">
+function count(){
+var VcorrectAnswers = 0;
+	
+var string = window.location.search.substring(1).split('&');
+var keyValuePairC = string[0].split('=');
+var RkeyValuePairC = string[1].split('=');
+
+var QcorrectAnswers = keyValuePairC[1].split(',');
+var RcorrectAnswers = RkeyValuePairC[1].split(',');
+
+var checked1 = document.getElementById("v1").checked;
+
+if(checked1)
+{	
+	VcorrectAnswers += 1;
+	document.forms[0].action = "q5.html?qc=" + QcorrectAnswers + "&rc=" + RcorrectAnswers + "&vc=" + VcorrectAnswers; 
+}
+else
+{
+	document.forms[0].action = "q5.html?qc=" + QcorrectAnswers + "&rc=" + RcorrectAnswers + "&vc=" + VcorrectAnswers;  
+}
+
+}
+function clear()
+{
+	document.getElementById('o1').checked=false;
+	document.getElementById('o2').checked=false;
+	document.getElementById('o3').checked=false;
+	document.getElementById('o4').checked=false;
+}
+</script>
+</head>
+<body>
+	<div id="q">
+		<form action="" method="post">
+        <h3> Question 5</h3>
+		<p> Watch this video and answer the following question.</br>
+			What is the source as mentioned in this video? </p>
+			<input type="radio" name="q4" id="v1" required>NASA.Gov
+			<input type="radio" name="q4" id="v2" required>Data.Gov<br>
+			<input type="radio" name="q4" id="v3" required>Facebook 
+			<input type="radio" name="q4" id="v4" required>XYZ.com</br> <br> <br>
+
+			<input type="submit" value="Submit & Next Question" onclick="count()"/>
+			<input type="submit" value="Cancel & Clear Selection" onclick="clear()"/>
+
+
+
+  	<div id="q4ex">
+			<div id="vd">
+				<embed src="stars.mp4" controller="true">
+			</div>
+
+	    </div>
+</form>
+	</div>
+</body>
+</html>
