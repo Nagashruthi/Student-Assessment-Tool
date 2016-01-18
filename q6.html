@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>
+score card
+</title>
+<style type="text/css">
+#d1
+{
+	border-style: solid;
+	border-radius: 6px;
+	margin-left: 200px;
+	margin-top:200px;
+	width: 900px;
+}
+h3
+{
+	background-color: gray;
+	text-align: center;
+}
+#b1,#thanks
+{
+  margin-left: 400px; 
+}
+#al
+{
+	margin-left: 200px;
+}
+</style>
+<script type="text/javascript">
+function finishtask()
+{
+   document.getElementById("thanks").innerHTML="Thank You!!";
+}
+function results(){
+
+var string = window.location.search.substring(1).split('&');
+var keyValuePairC = string[0].split('=');
+var RkeyValuePairC = string[1].split('=');
+var VkeyValuePairC = string[2].split('=');
+
+var QcorrectAnswers = keyValuePairC[1].split(',');
+var RcorrectAnswers = RkeyValuePairC[1].split(',');
+var VcorrectAnswers = VkeyValuePairC[1].split(',');
+
+var score1 = (+QcorrectAnswers/2) * 100;
+var score2 = (+RcorrectAnswers/1) * 100;
+var score3 = (+VcorrectAnswers/1) * 100;
+document.getElementById("qCount").innerHTML = 2;
+document.getElementById("rCount").innerHTML = 1;
+document.getElementById("vCount").innerHTML = 1;
+document.getElementById("qCount1").innerHTML = QcorrectAnswers;
+document.getElementById("rCount1").innerHTML = RcorrectAnswers;
+document.getElementById("vCount1").innerHTML = VcorrectAnswers;
+document.getElementById("qScore1").innerHTML = score1;
+document.getElementById("qScore2").innerHTML = score2;
+document.getElementById("qScore3").innerHTML = score3;
+}
+</script>
+</head>
+<body onLoad="results()">
+	<div id="d1">
+		<h3> Score Card </h3>
+		<div id="al">
+	<details>
+	<summary>Quantitative Section</summary><br>
+		Number of Questions Answered:<a id="qCount"></a>
+        <br>
+        Number of correct answers: <a id="qCount1"></a>
+        <br>
+        Score: <a id="qScore1"></a>
+    </details>
+
+    </details><br>
+        <details>
+			<summary>Reading Section</summary><br>
+		Number of Questions Answered:<a id="rCount"></a><br>
+        Number of correct answers:<a id="rCount1"></a><br>
+        Score: <a id="qScore2"></a>
+		</details><br>
+        <details>
+			<summary>Audio/Video Section</summary><br>
+		Number of Questions Answered:<a id="vCount"></a><br>
+        Number of correct answers:<a id="vCount1"></a><br>
+        Score: <a id="qScore3"></a>
+		</details><br>
+	</div>
+
+		<div id="thanks" ></div> <br>
+		<input type="submit" id="b1" value="Finish" onclick="finishtask()"/> <br><br>
+	</div>
+</body>
+</html>
