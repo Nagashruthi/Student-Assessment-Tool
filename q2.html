@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>
+Cosine Page
+</title>
+<style type="text/css">
+#q2
+{
+	margin:auto;
+	margin-top:200px ;
+	border-style: solid;
+	border-width: 2px;
+    width: 900px;
+}
+h3
+{
+	background-color: gray;
+	text-align: center;
+}
+#q2name{
+	margin-left: 500px;
+}
+#q2ex
+{
+	margin-left: 20px;
+
+}
+</style>
+<script type="text/javascript">
+function count(){
+	
+var string = window.location.search.substring(1).split('&');
+var keyValuePairC = string[0].split('=');
+var rightansQ = keyValuePairC[1].split(',');
+var checked = document.getElementById("o1").checked;
+if(checked)
+{	
+	var q=parseInt(rightansQ);
+	q +=1;
+	document.forms[0].action = "q3.html?qc=" + q;
+	alert(document.forms[0].action);
+}
+else
+{
+	document.forms[0].action = "q3.html?qc=" + rightansQ;
+}
+}
+
+function clear()
+{
+	document.getElementById("o1").checked=false;
+	document.getElementById('o2').checked=false;
+	document.getElementById('o3').checked=false;
+	document.getElementById('o4').checked=false;
+
+}
+</script>
+</head>
+<body>
+	<div id="q2">
+		<form action="" method="post">
+		<h3> Question 2</h3>
+		<div id="q2ex">
+		<p>
+			Select the cosine theorem formula.
+		</p>
+			<input type="radio" name="q2" id="o1" required> <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mi>cos</mi>
+<mo>(</mo>
+<mi>&alpha;</mi>
+<mo>&plusmn;</mo>
+<mo>&beta;</mo>
+<mo>)</mo>
+<mo>=</mo>
+<mrow>
+	<mrow>
+		<mi>cos</mi>
+		<mi>&alpha;</mi>
+		<mi>cos</mi>
+		<mi>&beta;</mi>
+	</mrow>
+	<mi>&mnplus;</mi>
+	<mrow>
+		<mi>sin</mi>
+		<mi>&alpha;</mi>
+		<mi>sin</mi>
+		<mi>&beta;</mi>
+	</mrow>
+</mrow>
+</math>
+
+
+			<input type="radio" name="q2" id="o2" required > <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mi>sin</mi>
+<mo>(</mo>
+<mi>&alpha;</mi>
+<mo>&plusmn;</mo>
+<mo>&beta;</mo>
+<mo>)</mo>
+<mo>=</mo>
+<mrow>
+	<mrow>
+		<mi>sin</mi>
+		<mi>&alpha;</mi>
+		<mi>cos</mi>
+		<mi>&beta;</mi>
+	</mrow>
+	<mi>&plusmn;</mi>
+	<mrow>
+		<mi>cos</mi>
+		<mi>&alpha;</mi>
+		<mi>sin</mi>
+		<mi>&beta;</mi>
+	</mrow>
+</mrow>
+</math>		   </br></br>
+
+
+			<input type="radio" name="q2" id="o3" required >  <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+	<mi>sin</mi><mi>&alpha;</mi><mo>+</mo>
+	<mi>sin</mi><mi>&beta;</mi>
+</mrow>
+<mo>=</mo>
+<mn>2</mn>
+<mrow>
+	<mrow>
+		<mi>sin</mi>
+		<mi>(</mi>
+		<mfrac linethickness="1">
+			<mrow>
+				<mi>&alpha;</mi> <mi>&plus;</mi> <mi>&beta;</mi>
+			</mrow>
+			<mn>2</mn>
+		</mfrac>
+		<mi>)</mi>
+	</mrow>
+	<mrow>
+		<mi>cos</mi>
+		<mi>(</mi>
+		<mfrac linethickness="1">
+			<mrow>
+				<mi>&alpha;</mi> <mi>&minus;</mi> <mi>&beta;</mi>
+			</mrow>
+			<mn>2</mn>
+		</mfrac>
+		<mi>)</mi>
+	</mrow>
+</mrow>
+</math>
+
+			<input type="radio" name="q2" id="o4" required >  <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+	<mi>sin</mi><mi>&alpha;</mi><mo>&minus;</mo>
+	<mi>sin</mi><mi>&beta;</mi>
+</mrow>
+<mo>=</mo>
+<mn>2</mn>
+<mrow>
+	<mrow>
+		<mi>cos</mi>
+		<mi>(</mi>
+		<mfrac linethickness="1">
+			<mrow>
+				<mi>&alpha;</mi> <mi>&plus;</mi> <mi>&beta;</mi>
+			</mrow>
+			<mn>2</mn>
+		</mfrac>
+		<mi>)</mi>
+	</mrow>
+	<mrow>
+		<mi>sin</mi>
+		<mi>(</mi>
+		<mfrac linethickness="1">
+			<mrow>
+				<mi>&alpha;</mi> <mi>&minus;</mi> <mi>&beta;</mi>
+			</mrow>
+			<mn>2</mn>
+		</mfrac>
+		<mi>)</mi>
+	</mrow>
+</mrow>
+</math>
+		</br><br><br>
+	</div>
+	<input type="submit" value="Submit & Next Question" onclick="count()"/> 
+	<input type="submit" value="Cancel & Clear Selection" onclick="clear()"/>
+	<br><br>
+	</form>
+	</div>
+</body>
+</html>
