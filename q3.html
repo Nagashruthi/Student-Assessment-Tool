@@ -1,0 +1,259 @@
+<html>
+<head>
+<title>
+	Reading question
+</title>
+<style type="text/css">
+#q3ex
+{
+	border-style: solid;
+	margin-top:200px;
+	border-width: 1px;
+	width: 1000px;
+	margin: auto;
+}
+#d1
+{
+   width: 400px;	
+   margin-left: 10px;
+}
+#d2
+{
+	margin-left: 400px;
+	width: 500px;
+}
+h3
+{
+	background-color: gray;
+	text-align: center;
+}
+#d3
+{
+	margin-top: 1px;
+}
+</style>
+
+<script type="text/javascript">
+function count(){
+var RcorrectAnswers = 0;
+var string = window.location.search.substring(1).split('&');
+var keyValuePairC = string[0].split('=');
+var QcorrectAnswers = keyValuePairC[1].split(',');
+
+var checked1 = document.getElementById("o1").checked;
+var checked2 = document.getElementById("optn1").checked;
+if(checked1 && checked2)
+{	
+		RcorrectAnswers += 1;
+		document.forms[0].action = "q4.html?qc=" + QcorrectAnswers + "&rc=" + RcorrectAnswers;  
+}
+else
+{
+	document.forms[0].action = "q4.html?qc=" + QcorrectAnswers + "&rc=" + RcorrectAnswers; 
+}
+}
+
+function q1det()
+{
+document.getElementById("optn1").style.visibility = "visible";	
+document.getElementById("text1").style.visibility = "visible";
+document.getElementById("optn2").style.visibility = "visible";	
+document.getElementById("text2").style.visibility = "visible";
+document.getElementById("optn3").style.visibility = "visible";	
+document.getElementById("text3").style.visibility = "visible";
+document.getElementById("optn4").style.visibility = "hidden";
+document.getElementById("optn5").style.visibility = "hidden";
+document.getElementById("optn6").style.visibility = "hidden";
+document.getElementById("optn7").style.visibility = "hidden";
+document.getElementById("optn8").style.visibility = "hidden";
+document.getElementById("optn9").style.visibility = "hidden";
+document.getElementById("text4").style.visibility = "hidden";
+document.getElementById("text5").style.visibility = "hidden";
+document.getElementById("text6").style.visibility = "hidden";
+document.getElementById("text7").style.visibility = "hidden";
+document.getElementById("text8").style.visibility = "hidden";
+document.getElementById("text9").style.visibility = "hidden";
+moreoptns1 = document.getElementById("o1").checked;
+if(moreoptns1) { 	document.getElementById("mark1").innerHTML = "$"+650; }
+}
+
+function q2det()
+{
+document.getElementById("optn4").style.visibility = "visible";	
+document.getElementById("text4").style.visibility = "visible";
+document.getElementById("optn5").style.visibility = "visible";	
+document.getElementById("text5").style.visibility = "visible";
+document.getElementById("optn6").style.visibility = "visible";	
+document.getElementById("text6").style.visibility = "visible";
+document.getElementById("optn1").style.visibility = "hidden";
+document.getElementById("optn2").style.visibility = "hidden";
+document.getElementById("optn3").style.visibility = "hidden";
+document.getElementById("optn7").style.visibility = "hidden";
+document.getElementById("optn8").style.visibility = "hidden";
+document.getElementById("optn9").style.visibility = "hidden";
+document.getElementById("text1").style.visibility = "hidden";
+document.getElementById("text2").style.visibility = "hidden";
+document.getElementById("text3").style.visibility = "hidden";
+document.getElementById("text7").style.visibility = "hidden";
+document.getElementById("text8").style.visibility = "hidden";
+document.getElementById("text9").style.visibility = "hidden";
+moreoptns2 = document.getElementById("o2").checked;
+if(moreoptns2) { 	document.getElementById("mark1").innerHTML = "$"+550; }
+}
+
+function q3det()
+{
+document.getElementById("optn7").style.visibility = "visible";	
+document.getElementById("text7").style.visibility = "visible";
+document.getElementById("optn8").style.visibility = "visible";	
+document.getElementById("text8").style.visibility = "visible";
+document.getElementById("optn9").style.visibility = "visible";	
+document.getElementById("text9").style.visibility = "visible";
+document.getElementById("optn1").style.visibility = "hidden";
+document.getElementById("optn2").style.visibility = "hidden";
+document.getElementById("optn3").style.visibility = "hidden";
+document.getElementById("optn4").style.visibility = "hidden";
+document.getElementById("optn5").style.visibility = "hidden";
+document.getElementById("optn6").style.visibility = "hidden";
+document.getElementById("text1").style.visibility = "hidden";
+document.getElementById("text2").style.visibility = "hidden";
+document.getElementById("text3").style.visibility = "hidden";
+document.getElementById("text4").style.visibility = "hidden";
+document.getElementById("text5").style.visibility = "hidden";
+document.getElementById("text6").style.visibility = "hidden";
+moreoptns3 = document.getElementById("o3").checked;
+if(moreoptns3) { 	document.getElementById("mark1").innerHTML = "$"+650; }
+}
+
+function hidden(){
+
+document.getElementById("optn1").style.visibility = "hidden";
+document.getElementById("optn2").style.visibility = "hidden";
+document.getElementById("optn3").style.visibility = "hidden";
+document.getElementById("optn4").style.visibility = "hidden";
+document.getElementById("optn5").style.visibility = "hidden";
+document.getElementById("optn6").style.visibility = "hidden";
+document.getElementById("optn7").style.visibility = "hidden";
+document.getElementById("optn8").style.visibility = "hidden";
+document.getElementById("optn9").style.visibility = "hidden";
+document.getElementById("text1").style.visibility = "hidden";
+document.getElementById("text2").style.visibility = "hidden";
+document.getElementById("text3").style.visibility = "hidden";
+document.getElementById("text4").style.visibility = "hidden";
+document.getElementById("text5").style.visibility = "hidden";
+document.getElementById("text6").style.visibility = "hidden";
+document.getElementById("text7").style.visibility = "hidden";
+document.getElementById("text8").style.visibility = "hidden";
+document.getElementById("text9").style.visibility = "hidden";
+}
+
+function mark2()
+{
+optn1 = document.getElementById("optn1").checked;
+optn2 = document.getElementById("optn2").checked;
+optn3 = document.getElementById("optn3").checked;
+optn4 = document.getElementById("optn4").checked;
+optn5 = document.getElementById("optn5").checked;
+optn6 = document.getElementById("optn6").checked;
+optn7 = document.getElementById("optn7").checked;
+optn8 = document.getElementById("optn8").checked;
+optn9 = document.getElementById("optn9").checked;
+if(optn1)
+{
+	document.getElementById("mark2").innerHTML = "Twitter";
+}
+if(optn2)
+{
+	document.getElementById("mark2").innerHTML = "Google";
+}
+if(optn3)
+{
+	document.getElementById("mark2").innerHTML = "Facebook";
+}
+if(optn4)
+{
+	document.getElementById("mark2").innerHTML = "Twitter";
+}
+if(optn5)
+{
+	document.getElementById("mark2").innerHTML = "Google";
+}
+if(optn6)
+{
+	document.getElementById("mark2").innerHTML = "Facebook";
+}
+if(optn7)
+{
+	document.getElementById("mark2").innerHTML = "Twitter";
+}
+if(optn8)
+{
+	document.getElementById("mark2").innerHTML = "Google";
+}
+if(optn9)
+{
+	document.getElementById("mark2").innerHTML = "Facebook";
+}	
+}
+
+function clear()
+{
+	document.getElementById('o1').checked=false;
+	document.getElementById('o2').checked=false;
+	document.getElementById('o3').checked=false;
+	document.getElementById('o4').checked=false;
+}
+
+</script>
+
+</head>
+<body onLoad="hidden()">
+	<div id="q3ex">
+	<form action=" " method="post">
+		<h3> Question3</h3>
+		
+		<div id="d1">
+			<p>As per the latest twitter news, complete the article snippet given by selecting  appropriate choices  for the blanks </p>
+		<div>
+		<div id="d2">
+			<blockquote>Twitter wants more cash. The company announced
+          <mark><a id="mark1">$____</a></mark>
+          million debt offerings in a filling today , each with a potential $100 increase provided that the sales oversubscribed. Assuming full tip, including the $100 million boosters
+          <mark><a id="mark2">_______</a></mark>
+          will raise up to $1.5billion with the two offerings.<br>
+        Source: http://techcrunch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/ </blockquote>
+		</div>
+		<div id="d3">
+			<input type="radio" name="q" id="o1" onclick="q1det()" >
+			Option 1 mark 1: $650 <br>
+			<input type="radio" name="q11" id="optn1" onclick="mark2()">
+			<a id="text1">Option 1 mark 2: Twitter</a> <br>
+           <input type='radio' name='q22' id='optn4' onClick="mark2()" > 
+           <a id="text4">Option 2 mark 2: Twitter</a> <br>
+           <input type='radio' name='q33' id='optn7' onClick="mark2()" > 
+           <a id="text7">Option 3 mark 2: Twitter</a> <br>
+
+           <input type="radio" name="q" id="o2" onclick="q2det()">
+           Option 2 mark 1: $550<br>
+           <input type='radio' name='q11' id='optn2' onClick="mark2()" > 
+           <a id="text2">Option 1 mark 2: Google</a> <br> 
+           <input type='radio' name='q22' id='optn5' onClick="mark2()" >
+           <a id="text5">Option 2 mark 2: Google</a> <br> 
+           <input type='radio' name='q33' id='optn8' onClick="mark2()" >
+            <a id="text8">Option 3 mark 2: Google</a> <br> 
+
+            <input type="radio" name="q" id="o2" onclick="q3det()">
+            Option 3 mark 1: $450<br>
+            <input type='radio' name='q11' id='optn3' onClick="mark2()" > 
+            <a id="text3">Option 1 mark 2: Facebook </a><br>    
+            <input type='radio' name='q22' id='optn6' onClick="mark2()" >
+            <a id="text6">Option 2 mark 2: Facebook </a><br>   
+            <input type='radio' name='q33' id='optn9' onClick="mark2()" >
+            <a id="text9">Option 3 mark 2: Facebook </a><br>
+
+<input type="submit" onclick="count()" value="Submit & Next Question"/>
+<input type="submit" onclick="clear()" value="Cancel & Clear Selection"/>
+	</form>
+</div>
+</body>
+</html>
