@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>
+	Page:Math Question
+</title>
+<style type="text/css">
+#q1name
+{
+	margin-left: 500px;
+}
+
+#q1{
+	margin:auto;
+  margin-top:200px;
+	border-style: solid;
+	border-width: 1px;
+	width: 900px;
+}
+h3
+{
+  background-color: gray;
+  text-align: center;
+}
+</style>
+<script type="text/javascript">
+function count(){
+  var rightansQ = 0;
+var checked = document.getElementById("o4").checked;
+if(checked)
+{
+  rightansQ += 1;
+  document.forms[0].action = "q2.html?qc=" + rightansQ;
+}
+else
+{
+  document.forms[0].action = "q2.html?qc=" + rightansQ;
+}
+}
+function clear()
+{
+  document.getElementById('o1').checked=false;
+  document.getElementById('o2').checked=false;
+  document.getElementById('o3').checked=false;
+  document.getElementById('o4').checked=false;
+}
+</script>
+</head>
+<body>
+	
+<div id="q1">
+  <tr>
+  <h3> Question 1</h3>
+    <table>
+    <td>
+<p> Given points(x1,y1) and (x2,y2) select the formula to find the equation of </br> the given line.</p>
+<form action="" method="post">
+	<input type="radio" name=q1 id="o1" required><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>y</mi><mrow><mo>=</mo><mrow><mrow><mi>m</mi></mrow><mrow><mi>x</mi></mrow><mo>+</mo><mi>b</mi></mrow> </math>
+
+	<input type="radio" name=q1 id="o2" required><math xmlns="http://www.w3.org/1998/Math/MathML">
+     <mrow>
+     <msup>
+    <mrow>
+      <mo>(</mo>
+        <mrow>
+          <mrow><mi>x</mi></mrow>
+          <mo>-</mo>
+          <mrow><mi>h</mi></mrow>
+        </mrow>
+      <mo>)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <msup>
+    <mrow>
+      <mo>(</mo>
+        <mrow>
+          <mrow><mi>y</mi></mrow>
+          <mo>-</mo>
+          <mrow><mi>k</mi></mrow>
+        </mrow>
+      <mo>)</mo>
+    </mrow>
+    <mn>2</mn>
+  </msup>
+  <mrow>
+  	<mo>=<mo>
+  		<mrow>
+  			<msup>
+  				<mi>r<mi></mn>2</mn>
+  		</msup>
+  			</mrow>
+    </math>
+
+	<br>
+	<input type="radio" name=q1 id="o3" required >
+	<math xmlns='http://www.w3.org/1998/Math/MathML'>
+		<mrow>
+			<mi>y</mi>
+			<mo>-</mo>
+			<mi>y1</mi>
+			<mo>=</mo>
+			<mrow>
+				<mi>m</mi>
+				<mrow>
+					<mo>(</mo>
+					<mi>x</mi>
+					<mo>-</mo>
+					<mi>x1</mi>
+					<mo>)</mo>
+				</mrow>
+			</mrow>
+		</mrow>
+	</math>
+
+
+
+
+
+	<input type="radio" name=q1 id="o4" required ><math xmlns='http://www.w3.org/1998/Math/MathML'>
+	<mrow>
+		<mi>y</mi><mo>-</mo><mi>y1</mi>
+	</mrow>
+	<mo>=</mo>
+	<mfrac linethickness='3px'>
+    <mfrac bevelled='true'>
+      <mn>1</mn>
+      <mi>x</mi>
+    </mfrac>
+    <mrow>
+      <mi>y</mi>
+      <mo>&minus;</mo>
+      <mn>2</mn>
+    </mrow>
+  </mfrac>
+</math>
+
+
+	<br>
+	<br>
+</td>
+  <td> <img src="img.png" > </td>
+
+</tr>
+
+</table>
+<input type="submit" value="Submit & Next Question" onclick="count()"/>
+<input type="submit" value="Cancel & Clear Selection" onclick="clear()"/>
+<br><br>
+<!--<a href="q2.html"> Submit & Next Question</a>-->
+</div>
+
+
+</body>
+</html>
