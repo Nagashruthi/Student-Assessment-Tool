@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>
+Survey
+</title>
+<style type="text/css">
+h3
+{
+	background-color: gray;
+	text-align: center;
+}
+#d1
+{
+	border-style: solid;
+	margin:auto;
+	margin-top:200px;
+	border-width: 1px;
+	width: 1000px;
+
+}
+</style>
+<script type="text/javascript">
+function count(){
+	
+var string = window.location.search.substring(1);
+document.forms[0].action = "q6.html?" + string;
+}
+
+function skip()
+{
+	var string = window.location.search.substring(1);
+document.forms[0].action = "q6.html?" + string;
+}
+</script>
+</head>
+<body>
+<div id="d1">
+<form action="" method="post">
+<h3> Survey </h3>
+<p> How did you like the center? </p><br>
+Comments: <textarea row="4" cols="50"></textarea>
+<br><br> Select Text Area location:<br> <br>
+City :<input list="city" name="city">
+<datalist id="city">
+	<option value="San Jose"></option>
+    <option value="San Francisco"></option>
+    <option value="Mountain View"></option>
+    <option value="Palo Alto"></option>
+    <option value="Santa Clara"></option>
+  </datalist></>
+
+ RoomNumber#:<input list="room" name="room">
+  <datalist id="room">
+    <option value="Room 1"></option>
+    <option value="Room 2"></option>
+    <option value="Room 3"></option>
+    <option value="Room 4"></option>
+    <option value="Room 5"></option>
+  </datalist>
+  <br> <br>
+  <input type="submit" value="Submit & Get Score" onclick="count()"/>
+  <input type="submit" value="Skip & Get Score" onclick="skip()"/>
+</div>
+</form>
+</body>
+</html>
